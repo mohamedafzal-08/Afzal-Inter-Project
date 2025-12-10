@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Afzal-Inter project</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-950 text-slate-100">
+
+  <!-- Background gradient blobs -->
+  <div class="fixed inset-0 -z-10 overflow-hidden">
+    <div class="absolute -top-32 -left-32 h-72 w-72 rounded-full bg-purple-600/30 blur-3xl"></div>
+    <div class="absolute top-10 right-0 h-72 w-72 rounded-full bg-blue-500/25 blur-3xl"></div>
+    <div class="absolute bottom-0 left-10 h-72 w-72 rounded-full bg-emerald-500/20 blur-3xl"></div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-30 backdrop-blur-xl bg-slate-950/80 border-b border-slate-800/60">
+    <div class="max-w-6xl mx-auto px-3 sm:px-4 py-2.5 flex items-center justify-between gap-2">
+      <a href="#" class="flex items-center gap-2 sm:gap-3 group">
+        <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-2xl bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 flex items-center justify-center shadow-lg shadow-purple-500/40 group-hover:scale-105 transition-transform">
+          <span class="text-white font-bold text-lg sm:text-xl">D</span>
+        </div>
+        <div class="leading-tight">
+          <h1 class="text-sm sm:text-lg font-semibold tracking-tight flex items-center gap-2">
+            DAKH Edu Solutions
+            <span class="hidden sm:inline-block text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-300 border border-emerald-400/40">
+              Intern 2025
+            </span>
+          </h1>
+          <p class="text-[10px] sm:text-[11px] text-slate-400">Web Development Intern Task Demo</p>
+        </div>
+      </a>
+
+      <!-- Desktop nav -->
+      <nav class="hidden md:flex items-center gap-4 lg:gap-6 text-xs lg:text-sm font-medium">
+        <a href="#courses" class="hover:text-emerald-300 transition-colors">Courses</a>
+        <a href="#tasks" class="hover:text-emerald-300 transition-colors">Intern Tasks</a>
+        <a href="#contact" class="hover:text-emerald-300 transition-colors">Contact</a>
+        <a
+          href="signup.html"
+          target="_blank"
+          class="px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white shadow-lg shadow-blue-500/40 text-[11px] uppercase tracking-wide hover:brightness-110 active:scale-95 transition-all"
+        >
+          Sign Up
+        </a>
+      </nav>
+
+      <!-- Mobile menu button -->
+      <button
+        id="mobile-menu-btn"
+        class="md:hidden p-2 rounded-xl border border-slate-700 bg-slate-900/70 hover:bg-slate-800 transition-colors"
+        aria-label="Toggle navigation"
+      >
+        <div class="space-y-1">
+          <span class="block w-5 h-0.5 bg-slate-100"></span>
+          <span class="block w-5 h-0.5 bg-slate-100"></span>
+          <span class="block w-5 h-0.5 bg-slate-100"></span>
+        </div>
+      </button>
+    </div>
+
+    <!-- Mobile nav -->
+    <nav id="mobile-menu" class="md:hidden hidden border-t border-slate-800 bg-slate-950/95 backdrop-blur">
+      <div class="px-4 py-3 space-y-2 text-sm">
+        <a href="#courses" class="block py-1.5 hover:text-emerald-300">Courses</a>
+        <a href="#tasks" class="block py-1.5 hover:text-emerald-300">Intern Tasks</a>
+        <a href="#contact" class="block py-1.5 hover:text-emerald-300">Contact</a>
+        <a
+          href="signup.html"
+          target="_blank"
+          class="inline-block mt-1.5 w-full text-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white text-xs uppercase tracking-wide hover:brightness-110 active:scale-95 transition-all"
+        >
+          Sign Up
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="max-w-6xl mx-auto px-3 sm:px-4 py-8 sm:py-10 md:py-16 flex flex-col-reverse md:flex-row items-center gap-8 md:gap-10">
+    <!-- Left -->
+    <div class="flex-1 space-y-4 sm:space-y-5 mt-6 md:mt-0">
+      <p class="inline-flex items-center gap-2 text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.18em] sm:tracking-[0.2em] text-emerald-300 bg-emerald-500/10 px-3 sm:px-4 py-1 rounded-full border border-emerald-400/40">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-300 animate-pulse"></span>
+        Intern Task Demo
+      </p>
+      <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-snug md:leading-tight tracking-tight">
+        Build <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">beautiful websites</span>
+        using simple tasks.
+      </h2>
+      <p class="text-xs sm:text-sm md:text-base text-slate-300 max-w-xl">
+        This page is created using <span class="font-semibold text-sky-300">HTML</span>,
+        <span class="font-semibold text-sky-300">Tailwind CSS</span> and
+        <span class="font-semibold text-sky-300">JavaScript</span>.
+        Layout, hover effects and responsive design are made to look like a real-world project.
+      </p>
+
+      <div class="flex flex-wrap items-center gap-3">
+        <a
+          href="#courses"
+          class="flex-1 sm:flex-none text-center px-4 sm:px-5 py-2.5 rounded-full bg-gradient-to-r from-emerald-500 to-teal-400 text-slate-950 text-sm font-semibold shadow-lg shadow-emerald-500/40 hover:translate-y-[1px] hover:shadow-xl transition-all"
+        >
+          Explore Courses
+        </a>
+        <a
+          href="signup.html"
+          target="_blank"
+          class="flex-1 sm:flex-none text-center px-4 sm:px-5 py-2.5 rounded-full border border-slate-700/80 bg-slate-900/70 text-sm font-medium text-slate-100 hover:border-purple-400 hover:bg-slate-900 transition-all flex items-center justify-center gap-2"
+        >
+          Apply as Intern
+          <span class="text-xs">↗️</span>
+        </a>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-3 sm:gap-4 text-[10px] sm:text-[11px] text-slate-400 pt-1 sm:pt-2">
+        <div class="flex items-center gap-1.5">
+          <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
+          <span>Responsive Design</span>
+        </div>
+        <div class="flex items-center gap-1.5">
+          <span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span>
+          <span>Tailwind Utility Classes</span>
+        </div>
+        <div class="flex items-center gap-1.5">
+          <span class="w-1.5 h-1.5 rounded-full bg-pink-400"></span>
+          <span>GitHub-ready Structure</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right -->
+    <div class="flex-1 w-full">
+      <div class="rounded-3xl bg-gradient-to-br from-blue-500 via-purple-500 to-slate-900 p-[1.5px] sm:p-[2px] shadow-[0_0_30px_rgba(59,130,246,0.6)]">
+        <div class="bg-slate-950/85 backdrop-blur-xl rounded-3xl p-4 sm:p-6 space-y-4 sm:space-y-5 border border-slate-800/80">
+          <!-- Header + toggle button -->
+          <div class="flex flex-col sm:flex-row items-start sm:items-start justify-between gap-3 sm:gap-2">
+            <div class="space-y-1">
+              <h3 class="font-semibold text-base sm:text-lg">Intern Tasks Overview</h3>
+              <p class="text-[10px] sm:text-[11px] text-slate-400">
+                Quick view of what you will do as an intern.
+              </p>
+            </div>
+            <div class="flex flex-col items-stretch sm:items-end gap-2 w-full sm:w-auto">
+              <span
+                id="tech-mode-label"
+                class="text-[10px] sm:text-[11px] px-2 py-1 rounded-full bg-slate-900 text-slate-300 border border-slate-700 text-center sm:text-right"
+              >
+                Frontend · HTML · CSS · JS
+              </span>
+              <button
+                id="tech-toggle-btn"
+                type="button"
+                class="text-[10px] px-3 py-1.5 rounded-full bg-slate-900/80 border border-purple-400/60 text-purple-200 hover:bg-purple-500/15 hover:border-purple-300 transition-all"
+              >
+                Switch to Python
+              </button>
+            </div>
+          </div>
+
+          <!-- Web tasks block -->
+          <div id="web-task-block" class="space-y-3">
+            <ul class="text-xs sm:text-sm text-slate-200 space-y-2">
+              <li class="flex items-start gap-2">
+                <span class="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+                <span>Create responsive homepage with header, sections & footer.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="mt-1 h-1.5 w-1.5 rounded-full bg-blue-400"></span>
+                <span>Design forms like login and signup with basic validation.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="mt-1 h-1.5 w-1.5 rounded-full bg-purple-400"></span>
+                <span>Use Tailwind for clean spacing, colours and hover effects.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="mt-1 h-1.5 w-1.5 rounded-full bg-pink-400"></span>
+                <span>Host your project using GitHub Pages with proper repo.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Python tasks block (hidden by default) -->
+          <div id="python-task-block" class="space-y-3 hidden">
+            <ul class="text-xs sm:text-sm text-slate-200 space-y-2">
+              <li class="flex items-start gap-2">
+                <span class="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+                <span>Write Python scripts to automate simple daily tasks.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="mt-1 h-1.5 w-1.5 rounded-full bg-blue-400"></span>
+                <span>Work with lists, dictionaries and functions for clean logic.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="mt-1 h-1.5 w-1.5 rounded-full bg-purple-400"></span>
+                <span>Read and process basic CSV / text files for reports.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="mt-1 h-1.5 w-1.5 rounded-full bg-pink-400"></span>
+                <span>Practice problem-solving and debugging using Python.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 pt-2 text-[10px] sm:text-[11px] text-slate-400">
+            <p>DAKH Edu Solutions · Intern Batch 2025</p>
+            <p>Demo only · No backend</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COURSES SECTION -->
+  <section id="courses" class="border-t border-slate-800/60 bg-slate-950/60">
+    <div class="max-w-6xl mx-auto px-3 sm:px-4 py-8 sm:py-10 md:py-12">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-6">
+        <div>
+          <h2 class="text-xl sm:text-2xl font-semibold">Popular Courses</h2>
+          <p class="text-xs sm:text-sm text-slate-400">
+            Demo cards to showcase course UI with hover effects.
+          </p>
+        </div>
+        <span class="inline-flex self-start sm:self-auto items-center gap-2 text-[10px] sm:text-[11px] px-3 py-1 rounded-full bg-slate-900/80 text-slate-300 border border-slate-700">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+          4 Demo Courses
+        </span>
+      </div>
+
+      <div class="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <article class="bg-slate-900/70 border border-slate-800 rounded-2xl p-4 flex flex-col justify-between shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+          <div class="space-y-2">
+            <p class="text-[11px] font-semibold text-emerald-300">Beginner · HTML</p>
+            <h3 class="font-semibold text-sm">HTML & CSS Basics</h3>
+            <p class="text-xs text-slate-400">
+              Learn to build basic, semantic web pages with clean structure.
+            </p>
+          </div>
+          <div class="mt-3 flex items-center justify-between text-[10px] sm:text-[11px] text-slate-400">
+            <p>Duration: 2 weeks</p>
+            <span class="px-2 py-1 rounded-full bg-emerald-500/10 text-emerald-300 border border-emerald-400/30">
+              Project based
+            </span>
+          </div>
+        </article>
+
+        <article class="bg-slate-900/70 border border-slate-800 rounded-2xl p-4 flex flex-col justify-between shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+          <div class="space-y-2">
+            <p class="text-[11px] font-semibold text-sky-300">Beginner · UI</p>
+            <h3 class="font-semibold text-sm">Tailwind CSS Essentials</h3>
+            <p class="text-xs text-slate-400">
+              Style components faster using utility-first Tailwind classes.
+            </p>
+          </div>
+          <div class="mt-3 flex items-center justify-between text-[10px] sm:text-[11px] text-slate-400">
+            <p>Duration: 1 week</p>
+            <span class="px-2 py-1 rounded-full bg-sky-500/10 text-sky-300 border border-sky-400/30">
+              Modern UI
+            </span>
+          </div>
+        </article>
+
+        <article class="bg-slate-900/70 border border-slate-800 rounded-2xl p-4 flex flex-col justify-between shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+          <div class="space-y-2">
+            <p class="text-[11px] font-semibold text-purple-300">Intermediate · JS</p>
+            <h3 class="font-semibold text-sm">JavaScript Fundamentals</h3>
+            <p class="text-xs text-slate-400">
+              Add interactivity, form validation and basic DOM logic.
+            </p>
+          </div>
+          <div class="mt-3 flex items-center justify-between text-[10px] sm:text-[11px] text-slate-400">
+            <p>Duration: 3 weeks</p>
+            <span class="px-2 py-1 rounded-full bg-purple-500/10 text-purple-300 border border-purple-400/30">
+              Hands-on
+            </span>
+          </div>
+        </article>
+
+        <article class="bg-slate-900/70 border border-slate-800 rounded-2xl p-4 flex flex-col justify-between shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+          <div class="space-y-2">
+            <p class="text-[11px] font-semibold text-pink-300">Project · GitHub</p>
+            <h3 class="font-semibold text-sm">GitHub Portfolio Project</h3>
+            <p class="text-xs text-slate-400">
+              Deploy your work to GitHub Pages and share your projects.
+            </p>
+          </div>
+          <div class="mt-3 flex items-center justify-between text-[10px] sm:text-[11px] text-slate-400">
+            <p>Duration: 1 week</p>
+            <span class="px-2 py-1 rounded-full bg-pink-500/10 text-pink-300 border border-pink-400/30">
+              Live hosting
+            </span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TASKS SECTION -->
+  <section id="tasks" class="max-w-6xl mx-auto px-3 sm:px-4 py-8 sm:py-10 md:py-12">
+    <h2 class="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4">Intern Tasks (Sample)</h2>
+    <p class="text-xs sm:text-sm text-slate-400 mb-4">
+      Short summary of typical web development intern responsibilities.
+    </p>
+
+    <div class="grid gap-4 md:grid-cols-2 text-xs sm:text-sm text-slate-200">
+      <ol class="space-y-2 list-decimal list-inside bg-slate-900/70 border border-slate-800 rounded-2xl p-4">
+        <li>Create basic web pages using HTML & CSS.</li>
+        <li>Update website text, images and basic layout.</li>
+        <li>Fix design issues like spacing, alignment & font size.</li>
+        <li>Upload course banners and announcements.</li>
+        <li>Test pages on mobile and desktop browsers.</li>
+      </ol>
+      <ol start="6" class="space-y-2 list-decimal list-inside bg-slate-900/70 border border-slate-800 rounded-2xl p-4">
+        <li>Check mobile responsiveness and improve sections.</li>
+        <li>Organize project files and folders clearly.</li>
+        <li>Create simple login and signup forms.</li>
+        <li>Upload final work to GitHub repository.</li>
+        <li>Get the work reviewed and receive certificates.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="bg-slate-950/80 border-t border-slate-800">
+    <div class="max-w-6xl mx-auto px-3 sm:px-4 py-8 sm:py-10 md:py-12 grid gap-6 md:gap-8 md:grid-cols-2">
+      <div class="space-y-3">
+        <h2 class="text-xl sm:text-2xl font-semibold">Contact</h2>
+        <p class="text-xs sm:text-sm text-slate-400">
+          For any doubts related to the intern tasks, you can use the sample email below.
+        </p>
+        <p class="text-xs sm:text-sm">
+          <span class="font-semibold text-slate-100">Email:</span>
+          <a href="mailto:contact@dakhedusolutions.in" class="underline text-sky-300 hover:text-sky-200">
+            contact@dakhedusolutions.in
+          </a>
+        </p>
+      </div>
+
+      <div class="bg-slate-900/70 border border-slate-800 rounded-2xl p-4 sm:p-5 shadow-md">
+        <h3 class="text-xs sm:text-sm font-semibold mb-2 flex items-center gap-2">
+          Quick Contact Form (Demo)
+          <span class="text-[9px] sm:text-[10px] px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700">
+            Frontend only
+          </span>
+        </h3>
+        <form class="space-y-3">
+          <input type="text" placeholder="Your Name"
+                 class="w-full px-3 py-2 rounded-lg bg-slate-950/70 border border-slate-700 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/60" />
+          <input type="email" placeholder="Your Email"
+                 class="w-full px-3 py-2 rounded-lg bg-slate-950/70 border border-slate-700 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/60" />
+          <textarea rows="3" placeholder="Your Message"
+                    class="w-full px-3 py-2 rounded-lg bg-slate-950/70 border border-slate-700 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/60"></textarea>
+          <button type="button"
+                  class="w-full sm:w-auto px-4 py-2 rounded-lg bg-gradient-to-r from-emerald-500 to-teal-400 text-slate-950 text-xs sm:text-sm font-semibold hover:brightness-110 active:scale-95 transition-all">
+            Send (Demo)
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-black/90 text-slate-500 text-[10px] sm:text-[11px] border-t border-slate-800">
+    <div class="max-w-6xl mx-auto px-3 sm:px-4 py-3 sm:py-4 flex flex-col md:flex-row items-center justify-between gap-1.5 sm:gap-2">
+      <p>©️ 2025 DAKH Edu Solutions – Intern Task Demo</p>
+      <p>Built with HTML · Tailwind CSS · JavaScript</p>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="js/main.js"></script>
+
+  <!-- Inline script for Python/Web toggle -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggleBtn = document.getElementById("tech-toggle-btn");
+      const webBlock = document.getElementById("web-task-block");
+      const pythonBlock = document.getElementById("python-task-block");
+      const modeLabel = document.getElementById("tech-mode-label");
+
+      if (!toggleBtn || !webBlock || !pythonBlock || !modeLabel) return;
+
+      toggleBtn.addEventListener("click", () => {
+        const showingWeb = !webBlock.classList.contains("hidden");
+
+        if (showingWeb) {
+          webBlock.classList.add("hidden");
+          pythonBlock.classList.remove("hidden");
+          toggleBtn.textContent = "Switch to Web Tasks";
+          modeLabel.textContent = "Python · Programming · Logic";
+        } else {
+          pythonBlock.classList.add("hidden");
+          webBlock.classList.remove("hidden");
+          toggleBtn.textContent = "Switch to Python";
+          modeLabel.textContent = "Frontend · HTML · CSS · JS";
+        }
+      });
+    });
+  </script>
+</body>
+</html>
